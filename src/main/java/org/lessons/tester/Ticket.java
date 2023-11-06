@@ -6,17 +6,19 @@ public class Ticket {
 
     private double travelKm;
     private double agePerson;
-    private double priceForKm = 0.21;
+    private final double priceForKm = 0.21;
     private double discountUnder18 = 0.20;
-    // sconto per gli over 65
     private double discountOver65 = 0.40;
 
 
+    // COSTRUTTORI
     public Ticket( double travelKm, double priceForKm, double agePerson) {
         this.travelKm = travelKm;
         this.agePerson = agePerson;
     }
 
+
+    // GETTER E SETTER
     public double getTravelKm() {
         return travelKm;
     }
@@ -38,6 +40,7 @@ public class Ticket {
     }
 
 
+    // METODI
     public double calculatePrice(double resultPrice){
         if (agePerson < 18){
             //Se l'età è minore di 18 anni allora:
